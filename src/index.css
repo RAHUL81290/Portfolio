@@ -1,0 +1,658 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+.arrowright,.arrowleft{
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  stroke: crimson;
+  fill: transparent;
+  stroke-width: 0.5px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  z-index: 2000;
+}
+.arrowright:hover{
+  transform: scale(1.3);
+  fill: crimson;
+  animation-play-state:paused;
+}
+.arrowleft{
+  bottom: 5%;
+  left: 5%;
+}
+.arrowleft:hover{
+  transform: scale(1.3);
+  fill: crimson;
+
+}
+.arrowrighthome{
+  animation:bounce infinite; 
+  animation-duration: 2s; 
+}
+.arrowleftproject{
+  position: fixed;
+}
+/*navbar*/
+.navbar-container{
+  display: flex;
+  width: 50px;
+  height: 100vh;
+  background: #000;
+  align-items: center;
+  justify-content: center;
+}
+ .navbarSections{
+  position: absolute;
+  left: -100%;
+  z-index: 1001;
+  transition: all 1s ease-in;
+}
+.navchange{
+  position: absolute;
+  left: 0;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+.navchange .menu{
+  fill: red;
+}
+.menu{
+  position: absolute;
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  fill: #fff;
+  stroke-width: 10px;
+  top: 10px;
+  left: 5px;
+  transition: fill 0.3s ease;
+  cursor: pointer;
+}
+.navbarSection{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.navbar-container li
+{
+  margin: 15px;
+}
+.navbar-container li svg{
+  fill: #fff;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  transition: fill 0.2s ease;
+}
+.navbar-container li svg:hover{
+  fill:crimson;
+}
+
+/*home*/
+.home-container{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: #111;
+  align-items: center;
+  justify-content: center;
+}
+.home-container .text{
+  color: #fff;
+  font-family: "Poppins",sans-serif;
+  font-size: 1.8rem;
+  animation: fadeInDown;
+  animation-duration: 1s;
+}
+.home-container .fullcontainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-container .textdiv{
+  margin-bottom:10px ;
+}
+
+.svgicon{
+  display: flex;
+  width: 450px;
+}
+.svgicon svg{
+  margin: 0 7px;
+}
+.svgicon svg:hover{
+  animation: rubberBand;
+  animation-duration: 1s;
+}
+
+.svgicon svg .path2{
+  fill: #fff;
+  stroke: #fff;
+  animation: icon-fill 3s linear;
+}
+.svgicon svg .path1{
+  fill:crimson;
+  stroke: #fff;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 0;
+}
+.svgicon .svgR .path1{
+  animation: icon-fill1 1s linear;
+  animation-direction: reverse;
+}
+.svgicon .svgA .path1{
+  animation: icon-fill1 1.5s linear;
+  animation-direction: reverse;
+}
+.svgicon .svgH .path1{
+  animation: icon-fill1 2s linear;
+  animation-direction: reverse;
+}
+.svgicon .svgU .path1{
+  animation: icon-fill1 2.5s linear;
+  animation-direction: reverse;
+}
+.svgicon .svgL .path1{
+  animation: icon-fill1 3s linear;
+  animation-direction: reverse;
+}
+
+@keyframes animation-icon{
+  0%{
+    stroke-dashoffset: 0;
+  }
+  100%{
+    stroke-dashoffset: 200;
+  }
+}
+@keyframes icon-fill{
+  0%{
+    fill-opacity: 0;
+  }
+  100%{
+    fill-opacity: 1;
+
+  }
+}
+@keyframes icon-fill1{
+  0%{
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+    fill:crimson;
+  }
+  100%{
+    fill-opacity: 0;
+    stroke-dashoffset: 200;
+  }
+}
+
+
+/*about*/
+.abouttext{ 
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  color: crimson;
+  font-family: "Ubuntu",sans-serif;
+  text-align: center;
+  animation:backInLeft;
+  animation-duration: 1s;
+}
+.mytext{
+  color: #fff;
+  text-align: justify;
+  font-size: 1.1rem;
+  font-weight: 0;
+}
+.btndiv{
+  animation: fadeIn; 
+  animation-duration: 2s;
+}
+.btn{
+  border-style: none;
+  background: crimson;
+  color: #fff;
+  padding: 10px 10px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 20px;
+  transition: all 0.5s ease;
+}
+.btn:hover{
+  border-radius: 20px;
+}
+
+
+.about-section{
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins",sans-serif;
+  
+}
+.about-section .myimg{
+  width: 300px;
+  margin-right: 30px;
+  border-radius: 100%;
+  box-shadow: 0px 25px 25px -15px #111;
+  animation: fadeIn; 
+  animation-duration: 3s;
+}
+.about-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 80px 30px;
+}
+.wave-section{
+  overflow: hidden;
+}
+.wave{
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+ height: 100px;
+ background: url(/src/components/images/wave.png);
+ background-size: 1000px 100px;
+}
+.wave.wave1{
+  animation: animate 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+.wave.wave2{
+  animation: animate2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+.wave.wave3{
+  animation: animate 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+.wave.wave4{
+  animation: animate 5s linear infinite;
+  z-index: 997;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+@keyframes animate{
+  0%{
+    background-position-x: 0;
+  }
+  100%{
+    background-position-x: 1000px;
+  }
+}
+@keyframes animate2{
+  0%{
+    background-position-x: 0;
+  }
+  100%{
+    background-position-x: -1000px;
+  }
+}
+
+/* Skills-Section */
+
+.skills-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: #111;
+  font-family: "Poppins",sans-serif;
+
+}
+.skillstext{
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  animation:backInLeft;
+  animation-duration: 1s;
+}
+.skillstext2{
+  color: crimson;
+  font-family: "Ubuntu",sans-serif;
+
+}
+.skillspara{
+  color: #fff;
+}
+.skills-section img{
+  position: absolute;
+  width: 65px;
+  cursor: pointer;
+  z-index: 1000;
+}
+.skills-section img:hover{
+  transform: scale(1.4);
+}
+
+.img{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 100%;
+  position: relative;
+  width: 450px;
+  height: 450px;
+}
+.img svg{
+  width: 300px;
+  animation: rotate 2s infinite linear;
+}
+.img svg path{
+  fill: transparent;
+  stroke: crimson;
+  stroke-width: 0.5px;
+  stroke-dasharray: 30;
+  stroke-dashoffset: 0; 
+}
+.textcontent{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.percentage{
+  text-align: center;
+  color: crimson;
+}
+@keyframes rotate{
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.c{
+  top: 15%;
+  left: 5%;
+  animation: fadeInTopLeft;
+  animation-duration: 2s;
+}
+.cpp{
+  right: 5%;
+  top: 15%;
+  animation: fadeInTopRight;
+  animation-duration: 2s;
+}
+.html{
+  bottom: 15%;
+  left: 5%;
+  animation: fadeInBottomLeft;
+  animation-duration: 2s;
+}
+.css{
+  bottom: 15%;
+  right: 5%;
+  animation: fadeInBottomRight;
+  animation-duration: 2s;
+  
+}
+.js{
+  left:43% ;
+  animation: fadeInDown;
+  animation-duration: 2s;
+}
+.react
+{
+  bottom: 0;
+  left: 43%;
+  animation: fadeInUp;
+  animation-duration: 2s;
+}
+.nodejs{
+  left: 0;
+  bottom: 40%;
+  animation: fadeInLeft;
+  animation-duration: 2s;
+}
+.mongodb{
+  right: 0;
+  bottom: 40%;
+  animation: fadeInRight;
+  animation-duration: 2s;
+}
+
+/* Project-section */
+
+.project-section{
+  background: #111;
+  width: 100%;
+  height: 100vh;
+}
+.projecttext{
+  position: absolute;
+  position: fixed;
+  color: crimson;
+  top: 10px;
+  left: 50px;
+  font-family: "Ubuntu",sans-serif;
+  animation:backInLeft;
+  animation-duration: 1s;
+}
+.project-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #111;
+}
+.box1{
+  width: 400px;
+}
+.box1 img{
+  width: 400px;
+}
+.box2{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  font-family: "Ubuntu",sans-serif;
+  background: #111;
+  border-radius: 10px;
+  align-items: center;
+  color: crimson;
+  border: 2px solid crimson;
+}
+.box2 a{
+  position: absolute;
+  text-decoration: none;
+  color: crimson;
+  background: #fff;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  bottom: 10%;
+  border-radius: 10px;
+}
+.box2 a:hover{
+  transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media Query*/
+@media (max-width:750px) {
+  .box1{
+    width: 400px;
+  }
+  .box1 img{
+    width: 400px;
+  }
+  .box2{
+    width:200px ;
+    height:300px;
+  }
+  .project-container h1{
+    font-size: 1.2rem;
+  }
+  .box2 a{
+    font-size: 1rem;
+  }
+}
+@media (max-width:650px) {
+  .box1{
+    width: 200px;
+  }
+  .box1 img{
+    width: 200px;
+  }
+  .box2{
+    width:150px ;
+    height:250px;
+  }
+  .project-container h1{
+    font-size: 1rem;
+  }
+  .box2 a{
+    font-size: 1rem;
+  }
+  .project-container{
+    width: 100%;
+    height: 100vh;
+  }
+}
+@media (max-width:800px){
+  .about-container{
+    flex-wrap: wrap;
+    margin: 0 20px;
+    margin-top:30px;
+  }
+  .about-section .myimg{
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  .mytext{
+    font-size: 0.8rem;
+  }
+}
+@media (max-width:600px){
+  .svgicon{
+    width: 300px;
+  }
+  .svgicon svg{
+    margin: 0 3px;
+  }
+
+
+  /* skills responsive */
+
+  .img{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 100%;
+    position: relative;
+    width: 240px;
+    height: 240px;
+  }
+  .img svg{
+    width: 150px;
+    animation: rotate 2s infinite linear;
+  }
+  .skills-section img{
+    position: absolute;
+    width: 40px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  .textskills{
+    font-size: 1.2rem;
+  }
+  .percentage{
+    font-size: 1rem;
+  }
+  .skillstext2{
+    color: crimson;
+    font-family: "Ubuntu",sans-serif;
+    font-size: 2rem;
+  }
+
+
+
+}
+@media (max-width:500px){
+  .home-container .text1{
+    font-size: 1.5rem;
+  }
+  .home-container .text2{
+    font-size: 2.3rem;
+  }
+  .home-container span{
+    margin: 0px 6px;
+  }
+}
+@media (max-width:390px){
+  .wave{
+    height: 70px;
+  }
+  .wave.wave1{
+    bottom: 0;
+  }
+  .wave.wave2{
+    bottom: 1px;
+  }
+  .wave.wave3{
+    bottom: 2px;
+  }
+  .wave.wave4{
+    bottom: 3px;
+  }
+}
+@media (max-width:300px){
+  .home-container .text1{
+    font-size: 1.2rem;
+  }
+  .home-container .text2{
+    font-size: 1.5rem;
+  }
+  .home-container span{
+    margin: 0px 5px;
+  }
+}
+
