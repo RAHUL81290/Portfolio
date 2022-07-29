@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.8a80c7f6.css",
+    "main.js": "/Portfolio/static/js/main.633444c1.js",
+    "static/media/1655984454929-modified.png": "/Portfolio/static/media/1655984454929-modified.216c31ff7b84fcd8e8ad.png",
+    "static/media/weatherapp.png": "/Portfolio/static/media/weatherapp.5dde154e7191442a577b.png",
+    "static/media/gostclash.png": "/Portfolio/static/media/gostclash.66f1477bb6f25cf10bc0.png",
+    "static/media/blog.png": "/Portfolio/static/media/blog.d3d85539d36d20370383.png",
+    "static/media/portfolio.png": "/Portfolio/static/media/portfolio.1aaaced060db495bbf1d.png",
+    "static/media/react.png": "/Portfolio/static/media/react.d2f858cd34386e69caee.png",
+    "static/media/mongodb.png": "/Portfolio/static/media/mongodb.4f7af09e6354d51beec8.png",
+    "static/media/ResumeRahul.pdf": "/Portfolio/static/media/ResumeRahul.02558328269e225f917a.pdf",
+    "static/media/c.png": "/Portfolio/static/media/c.cdcf3439b857aa9604b4.png",
+    "static/media/css3.png": "/Portfolio/static/media/css3.cb993f18f584f8060eb3.png",
+    "static/media/html5.png": "/Portfolio/static/media/html5.513071a6682dc6800ad0.png",
+    "static/media/js.png": "/Portfolio/static/media/js.3ea14f36d30caed7d5cf.png",
+    "static/media/cpp.png": "/Portfolio/static/media/cpp.c417f91d77a7ff6b1329.png",
+    "static/media/nodejs.png": "/Portfolio/static/media/nodejs.b508473ad71a31ce2fae.png",
+    "index.html": "/Portfolio/index.html",
+    "main.8a80c7f6.css.map": "/Portfolio/static/css/main.8a80c7f6.css.map",
+    "main.633444c1.js.map": "/Portfolio/static/js/main.633444c1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8a80c7f6.css",
+    "static/js/main.633444c1.js"
+  ]
+}
